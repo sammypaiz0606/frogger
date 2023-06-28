@@ -8,7 +8,25 @@ let currentIndex = 76;
 const width = 9
 function moveFrog(e) {
 
-    console.log('it work');
+    switch(e.key) {
+        case 'ArrowLeft' :
+            console.log('moved left');
+            currentIndex -= 1;
+            break
+        case 'ArrowRight' :
+            console.log('moved right');
+            currentIndex += 1;
+            break
+        case 'ArrowUp' :
+            console.log('moved up');
+            currentIndex -= width;
+            break
+        case 'ArrowDown' :
+            console.log('noved down');
+            currentIndex += width;
+            break
+
+    }
     squares[currentIndex].classList.add('frog');
 }
 document.addEventListener('keyup', moveFrog)
